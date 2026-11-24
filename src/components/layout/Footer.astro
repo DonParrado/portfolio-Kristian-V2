@@ -1,33 +1,44 @@
 ---
 import { Image } from "astro:assets";
 import Logo from "../../imgs/mentora_redondo1.svg";
+import { withBase } from "../../utils/urls";
 
 const columns = [
   {
     title: "Terapias",
     links: [
-      { label: "Terapia Individual", href: "/#terapia-individual-palma" },
-      { label: "Terapia de Pareja", href: "/#terapia-pareja-palma" },
-      { label: "Terapia individual (info)", href: "/terapia-individual-palma/" },
-      { label: "Terapia de pareja (info)", href: "/terapia-pareja-palma/" },
+      { label: "Terapia Individual", href: withBase("#terapia-individual-palma") },
+      { label: "Terapia de Pareja", href: withBase("#terapia-pareja-palma") },
+      {
+        label: "Terapia individual (info)",
+        href: withBase("terapia-individual-palma/"),
+      },
+      {
+        label: "Terapia de pareja (info)",
+        href: withBase("terapia-pareja-palma/"),
+      },
     ],
   },
   {
     title: "Secciones",
     links: [
-      { label: "Inicio", href: "/#inicio" },
-      { label: "Testimonio", href: "/#testimonio" },
-      { label: "¿En qué te ayudo?", href: "/#features" },
-      { label: "¿Quién soy?", href: "/#whois" },
-      { label: "Testimonios", href: "/#reviews" },
-      { label: "Contacto", href: "/#formulario" },
+      { label: "Inicio", href: withBase("#inicio") },
+      { label: "Testimonio", href: withBase("#testimonio") },
+      { label: "¿En qué te ayudo?", href: withBase("#features") },
+      { label: "¿Quién soy?", href: withBase("#whois") },
+      { label: "Testimonios", href: withBase("#reviews") },
+      { label: "Contacto", href: withBase("#formulario") },
     ],
   },
   {
     title: "Legal",
     links: [
-      { label: "Aviso legal", href: "/documentos/avisoLegal.pdf", external: true },
-      { label: "Política de cookies", href: "/politica-cookies/" },
+      {
+        label: "Aviso legal",
+        href: withBase("documentos/avisoLegal.pdf"),
+        external: true,
+      },
+      { label: "Política de cookies", href: withBase("politica-cookies/") },
     ],
   },
 ];

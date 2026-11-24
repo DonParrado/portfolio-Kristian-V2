@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import FotoIndividual from "../../imgs/individual1.jpg";
+import { withBase } from "../../utils/urls";
 ---
 
 <section id="terapia-individual-palma" class="bg-white">
@@ -29,7 +30,7 @@ import FotoIndividual from "../../imgs/individual1.jpg";
             > más de lo que tú las controlas a ellas?
           </p>
         </div>
-        <a class="btn-outline mt-8" href="/terapia-individual-palma/">Ver más</a>
+        <a class="btn-outline mt-8" href={withBase("terapia-individual-palma/")}>Ver más</a>
       </div>
     </div>
   </div>

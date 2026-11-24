@@ -1,4 +1,6 @@
 ---
+import { withBase } from "../../utils/urls";
+
 const UI = {
   accept:
     "rounded-full bg-primary px-4 py-3 text-sm font-extrabold text-primaryhover shadow-lg shadow-primary/30 transition hover:bg-primary/90 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryhover sm:flex-1 sm:px-8 sm:py-3.5 sm:text-base",
@@ -85,7 +87,7 @@ const UI = {
         <p class="text-xs">
           Más información en nuestra
           <a
-            href="/politica-cookies"
+            href={withBase("politica-cookies/")}
             class="text-primaryhover/80 underline underline-offset-2 transition-colors duration-300 hover:text-primaryhover"
             >Política de cookies</a
           >.
@@ -220,11 +222,11 @@ const UI = {
         class="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-500 sm:mt-5"
       >
         <a
-          href="/politica-cookies"
+          href={withBase("politica-cookies/")}
           class="underline underline-offset-2 hover:text-primaryhover">Política de cookies</a
         >
         <a
-          href="/documentos/avisoLegal.pdf"
+          href={withBase("documentos/avisoLegal.pdf")}
           target="_blank"
           rel="noopener noreferrer"
           class="underline underline-offset-2 hover:text-primaryhover">Aviso legal</a

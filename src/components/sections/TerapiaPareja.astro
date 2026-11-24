@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import FotoPareja from "../../imgs/pareja1.jpg";
+import { withBase } from "../../utils/urls";
 ---
 
 <section id="terapia-pareja-palma" class="bg-background">
@@ -30,7 +31,7 @@ import FotoPareja from "../../imgs/pareja1.jpg";
             >
           </p>
         </div>
-        <a class="btn-outline mt-8" href="/terapia-pareja-palma/">Ver más</a>
+        <a class="btn-outline mt-8" href={withBase("terapia-pareja-palma/")}>Ver más</a>
       </div>
     </div>
   </div>

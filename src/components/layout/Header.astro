@@ -1,10 +1,11 @@
 ---
 import { Image } from "astro:assets";
 import Logo from "../../imgs/mentora_redondo1.svg";
+import { withBase } from "../../utils/urls";
 
 const terapias = [
-  { label: "Terapia Individual", href: "/#terapia-individual-palma" },
-  { label: "Terapia de Pareja", href: "/#terapia-pareja-palma" },
+  { label: "Terapia Individual", href: withBase("#terapia-individual-palma") },
+  { label: "Terapia de Pareja", href: withBase("#terapia-pareja-palma") },
 ];
 ---
 
@@ -13,7 +14,7 @@ const terapias = [
   class="sticky top-0 z-50 border-b border-primaryhover/10 bg-background/90 backdrop-blur-md"
 >
   <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 md:h-20">
-    <a href="/#inicio" class="shrink-0" aria-label="Mentora | Inicio">
+    <a href={withBase("#inicio")} class="shrink-0" aria-label="Mentora | Inicio">
       <Image
         src={Logo}
         alt="Mentora"
@@ -31,8 +32,8 @@ const terapias = [
     </p>
 
     <nav class="hidden items-center gap-1 md:flex" aria-label="Principal">
-      <a data-scrollspy-link href="/#inicio" class="nav-link">Inicio</a>
-      <a data-scrollspy-link href="/#testimonio" class="nav-link">Testimonio</a>
+      <a data-scrollspy-link href={withBase("#inicio")} class="nav-link">Inicio</a>
+      <a data-scrollspy-link href={withBase("#testimonio")} class="nav-link">Testimonio</a>
 
       <div class="group relative" data-dropdown>
         <button
@@ -66,10 +67,10 @@ const terapias = [
         </div>
       </div>
 
-      <a data-scrollspy-link href="/#features" class="nav-link">¿En qué te ayudo?</a>
-      <a data-scrollspy-link href="/#whois" class="nav-link">¿Quién soy?</a>
-      <a data-scrollspy-link href="/#reviews" class="nav-link">Testimonios</a>
-      <a data-scrollspy-link href="/#formulario" class="nav-link">Contacto</a>
+      <a data-scrollspy-link href={withBase("#features")} class="nav-link">¿En qué te ayudo?</a>
+      <a data-scrollspy-link href={withBase("#whois")} class="nav-link">¿Quién soy?</a>
+      <a data-scrollspy-link href={withBase("#reviews")} class="nav-link">Testimonios</a>
+      <a data-scrollspy-link href={withBase("#formulario")} class="nav-link">Contacto</a>
     </nav>
 
     <button
@@ -92,8 +93,8 @@ const terapias = [
     aria-label="Móvil"
   >
     <ul class="flex flex-col gap-1">
-      <li><a href="/#inicio" class="mobile-link">Inicio</a></li>
-      <li><a href="/#testimonio" class="mobile-link">Testimonio</a></li>
+      <li><a href={withBase("#inicio")} class="mobile-link">Inicio</a></li>
+      <li><a href={withBase("#testimonio")} class="mobile-link">Testimonio</a></li>
       <li>
         <button
           type="button"
@@ -121,10 +122,10 @@ const terapias = [
           }
         </ul>
       </li>
-      <li><a href="/#features" class="mobile-link">¿En qué te ayudo?</a></li>
-      <li><a href="/#whois" class="mobile-link">¿Quién soy?</a></li>
-      <li><a href="/#reviews" class="mobile-link">Testimonios</a></li>
-      <li><a href="/#formulario" class="mobile-link">Contacto</a></li>
+      <li><a href={withBase("#features")} class="mobile-link">¿En qué te ayudo?</a></li>
+      <li><a href={withBase("#whois")} class="mobile-link">¿Quién soy?</a></li>
+      <li><a href={withBase("#reviews")} class="mobile-link">Testimonios</a></li>
+      <li><a href={withBase("#formulario")} class="mobile-link">Contacto</a></li>
       <li class="pt-3">
         <a
           href="https://wa.me/+34676466092"

@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { withBase } from "../utils/urls";
 ---
 
 <Layout title="Terapia de Pareja en Palma de Mallorca | Mentora">
@@ -93,7 +94,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
 
         <div class="flex justify-center pt-4">
-          <a class="btn-primary" href="/#terapia-pareja-palma">
+          <a class="btn-primary" href={withBase("#terapia-pareja-palma")}>
             Volver a Terapia de Pareja
           </a>
         </div>

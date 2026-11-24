@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import FotoCruzadas from "../../imgs/cruzadas1.jpg";
+import { withBase } from "../../utils/urls";
 ---
 
 <section id="whois" class="bg-background">
@@ -40,7 +41,7 @@ import FotoCruzadas from "../../imgs/cruzadas1.jpg";
           Si quieres conocer la historia completa y cómo influye hoy en mi
           manera de trabajar, puedes leerla aquí.
         </p>
-        <a class="btn-primary mt-6" href="/biografia/">Ver historia completa</a>
+        <a class="btn-primary mt-6" href={withBase("biografia/")}>Ver historia completa</a>
       </div>
 
       <div data-reveal class="order-first md:order-last">
