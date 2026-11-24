@@ -1,0 +1,164 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../../imgs/logo.svg";
+import Phone from "../ui/Phone.astro";
+import Location from "../ui/Location.astro";
+import Mail from "../ui/Mail.astro";
+import Instagram from "../ui/Instagram.astro";
+---
+
+<section id="formulario" class="bg-background">
+  <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
+    <div class="grid gap-12 lg:grid-cols-2 lg:gap-16">
+      <div data-reveal>
+        <p class="section-eyebrow">Hablemos</p>
+        <h2 class="section-title">Contacto</h2>
+        <p class="mt-4 text-base leading-relaxed text-slate-600">
+          Complete el formulario para cualquier pregunta o solicitud adicional.
+          Nuestro equipo estará encantado de proporcionarle la información que
+          necesita.
+        </p>
+
+        <form id="contact-form" class="mt-8 space-y-4" novalidate>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label for="nombre" class="mb-1.5 block text-sm font-medium text-primaryhover">
+                Nombre Completo
+              </label>
+              <input
+                id="nombre"
+                name="nombre"
+                type="text"
+                required
+                placeholder="Adrián Pérez"
+                class="block w-full rounded-2xl border border-slate-200 bg-white px-5 py-3 text-base placeholder-gray-400 outline-none transition focus:border-primaryhover focus:ring-2 focus:ring-primaryhover/30"
+              />
+            </div>
+            <div>
+              <label for="email" class="mb-1.5 block text-sm font-medium text-primaryhover">
+                Dirección de correo electrónico
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                placeholder="javier@example.com"
+                class="block w-full rounded-2xl border border-slate-200 bg-white px-5 py-3 text-base placeholder-gray-400 outline-none transition focus:border-primaryhover focus:ring-2 focus:ring-primaryhover/30"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="mensaje" class="mb-1.5 block text-sm font-medium text-primaryhover">
+              Cuéntenos qué podemos hacer por usted
+            </label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              required
+              rows="5"
+              placeholder="Cuéntenos..."
+              class="block w-full rounded-2xl border border-slate-200 bg-white px-5 py-3 text-base placeholder-gray-400 outline-none transition focus:border-primaryhover focus:ring-2 focus:ring-primaryhover/30"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="btn-primary w-full sm:w-auto"
+            data-whatsapp-button="1"
+            data-whatsapp-source="formulario"
+          >
+            Contáctenos
+          </button>
+        </form>
+
+        <div class="relative mt-8 aspect-video w-full overflow-hidden rounded-3xl shadow-xl">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.371551630634!2d2.66060487637025!3d39.573775806512145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1297931e8c41d7b1%3A0xf478b48759b15946!2sTerapeuta%20Emocional%20Palma!5e0!3m2!1ses!2ses!4v1726782784778!5m2!1ses!2ses"
+            class="absolute inset-0 h-full w-full border-0"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa Terapeuta Emocional Palma"></iframe>
+        </div>
+      </div>
+
+      <div data-reveal class="flex flex-col items-center lg:items-start">
+        <Image
+          src={Logo}
+          alt="Mentora"
+          width={425}
+          height={425}
+          class="h-56 w-56 rounded-full object-cover sm:h-72 sm:w-72"
+        />
+
+        <div class="mt-8 space-y-5 text-base text-slate-700">
+          <p class="flex items-start gap-3">
+            <Location />
+            <span>Passatge Siri, 5, Llevant, 07005 Palma, Illes Balears, España</span>
+          </p>
+          <p class="flex items-start gap-3">
+            <Phone />
+            <a href="tel:+34676466092" class="transition hover:text-primaryhover">
+              (+34) 676 46 60 92
+            </a>
+          </p>
+          <p class="flex items-start gap-3">
+            <Mail />
+            <a
+              href="mailto:terapeutaemocionalpalma@gmail.com"
+              class="break-all text-primaryhover underline underline-offset-2"
+            >
+              terapeutaemocionalpalma@gmail.com
+            </a>
+          </p>
+          <p class="flex items-center gap-3">
+            <span class="text-slate-600">Síguenos en:</span>
+            <a
+              href="https://www.instagram.com/mentora.palma.kristian/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              class="transition hover:text-primaryhover"
+            >
+              <Instagram />
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById("contact-form") as HTMLFormElement | null;
+
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const nombre = (form.elements.namedItem("nombre") as HTMLInputElement).value.trim();
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value.trim();
+    const mensaje = (form.elements.namedItem("mensaje") as HTMLTextAreaElement).value.trim();
+
+    if (!nombre || !email || !mensaje) {
+      form.reportValidity();
+      return;
+    }
+
+    const ref = window.WhatsAppTracking?.currentRef || "";
+    const body =
+      `Hola Kristian, me gustaría agendar la primera sesión gratuita. ¿Cómo funciona el primer encuentro?` +
+      `%0A%0A(ref: ${encodeURIComponent(ref)})` +
+      `%0ANombre: ${encodeURIComponent(nombre)}` +
+      `%0ACorreo: ${encodeURIComponent(email)}` +
+      `%0AMensaje: ${encodeURIComponent(mensaje)}`;
+
+    window.open(
+      `https://api.whatsapp.com/send?phone=34676466092&text=${body}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
+  });
+</script>

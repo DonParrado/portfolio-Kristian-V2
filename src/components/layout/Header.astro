@@ -1,0 +1,193 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../../imgs/mentora_redondo1.svg";
+
+const terapias = [
+  { label: "Terapia Individual", href: "/#terapia-individual-palma" },
+  { label: "Terapia de Pareja", href: "/#terapia-pareja-palma" },
+];
+---
+
+<header
+  id="site-header"
+  class="sticky top-0 z-50 border-b border-primaryhover/10 bg-background/90 backdrop-blur-md"
+>
+  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 md:h-20">
+    <a href="/#inicio" class="shrink-0" aria-label="Mentora | Inicio">
+      <Image
+        src={Logo}
+        alt="Mentora"
+        class="h-11 w-11 rounded-full object-cover transition-transform duration-300 hover:scale-110 md:h-14 md:w-14"
+      />
+    </a>
+
+    <p class="mr-auto ml-4 hidden max-w-[16rem] leading-tight lg:block">
+      <span class="block font-display text-lg font-bold text-primaryhover"
+        >Tu historia no te define</span
+      >
+      <span class="block text-[10px] font-extrabold uppercase tracking-[0.18em] text-primaryhover/70"
+        >lo que haces con ella, sí</span
+      >
+    </p>
+
+    <nav class="hidden items-center gap-1 md:flex" aria-label="Principal">
+      <a data-scrollspy-link href="/#inicio" class="nav-link">Inicio</a>
+      <a data-scrollspy-link href="/#testimonio" class="nav-link">Testimonio</a>
+
+      <div class="group relative" data-dropdown>
+        <button
+          type="button"
+          class="nav-link"
+          aria-haspopup="true"
+          aria-expanded="false"
+          data-dropdown-toggle
+        >
+          Terapias
+          <svg class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path
+              fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <div
+          class="invisible absolute left-0 top-full z-50 w-56 translate-y-2 rounded-2xl border border-primaryhover/10 bg-white p-2 opacity-0 shadow-xl transition duration-150 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100"
+        >
+          {
+            terapias.map((item) => (
+              <a
+                href={item.href}
+                class="block rounded-xl px-4 py-2.5 text-sm font-medium text-primaryhover transition hover:bg-background"
+              >
+                {item.label}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <a data-scrollspy-link href="/#features" class="nav-link">¿En qué te ayudo?</a>
+      <a data-scrollspy-link href="/#whois" class="nav-link">¿Quién soy?</a>
+      <a data-scrollspy-link href="/#reviews" class="nav-link">Testimonios</a>
+      <a data-scrollspy-link href="/#formulario" class="nav-link">Contacto</a>
+    </nav>
+
+    <button
+      id="menu-toggle"
+      type="button"
+      class="flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-full transition hover:bg-primaryhover/10 md:hidden"
+      aria-controls="mobile-nav"
+      aria-expanded="false"
+      aria-label="Abrir menú"
+    >
+      <span class="menu-bar block h-0.5 w-7 bg-primaryhover transition"></span>
+      <span class="menu-bar block h-0.5 w-7 bg-primaryhover transition"></span>
+      <span class="menu-bar block h-0.5 w-7 bg-primaryhover transition"></span>
+    </button>
+  </div>
+
+  <nav
+    id="mobile-nav"
+    class="no-scrollbar hidden max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-primaryhover/10 bg-background px-4 pb-8 pt-4 md:hidden"
+    aria-label="Móvil"
+  >
+    <ul class="flex flex-col gap-1">
+      <li><a href="/#inicio" class="mobile-link">Inicio</a></li>
+      <li><a href="/#testimonio" class="mobile-link">Testimonio</a></li>
+      <li>
+        <button
+          type="button"
+          class="mobile-link flex w-full items-center justify-between"
+          data-mobile-subtoggle
+          aria-expanded="false"
+        >
+          Terapias
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path
+              fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <ul class="hidden pl-4" data-mobile-submenu>
+          {
+            terapias.map((item) => (
+              <li>
+                <a href={item.href} class="mobile-link">
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </li>
+      <li><a href="/#features" class="mobile-link">¿En qué te ayudo?</a></li>
+      <li><a href="/#whois" class="mobile-link">¿Quién soy?</a></li>
+      <li><a href="/#reviews" class="mobile-link">Testimonios</a></li>
+      <li><a href="/#formulario" class="mobile-link">Contacto</a></li>
+      <li class="pt-3">
+        <a
+          href="https://wa.me/+34676466092"
+          data-whatsapp-button="1"
+          data-whatsapp-source="menu_movil"
+          class="btn-primary w-full">Hablar por WhatsApp</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const header = document.getElementById("site-header");
+  const toggle = document.getElementById("menu-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
+  const subToggle = document.querySelector("[data-mobile-subtoggle]");
+  const submenu = document.querySelector("[data-mobile-submenu]");
+
+  const setMenu = (open: boolean) => {
+    mobileNav?.classList.toggle("hidden", !open);
+    toggle?.setAttribute("aria-expanded", String(open));
+    toggle?.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+    toggle?.querySelectorAll(".menu-bar").forEach((bar, i) => {
+      const el = bar as HTMLElement;
+      if (open) {
+        if (i === 0) el.style.transform = "translateY(7px) rotate(45deg)";
+        if (i === 1) el.style.opacity = "0";
+        if (i === 2) el.style.transform = "translateY(-7px) rotate(-45deg)";
+      } else {
+        el.style.transform = "";
+        el.style.opacity = "";
+      }
+    });
+  };
+
+  toggle?.addEventListener("click", () => {
+    setMenu(mobileNav?.classList.contains("hidden") ?? true);
+  });
+
+  mobileNav?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenu(false));
+  });
+
+  subToggle?.addEventListener("click", () => {
+    const open = submenu?.classList.contains("hidden") ?? true;
+    submenu?.classList.toggle("hidden", !open);
+    subToggle.setAttribute("aria-expanded", String(open));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMenu(false);
+  });
+
+  let lastScroll = 0;
+  window.addEventListener(
+    "scroll",
+    () => {
+      const current = window.scrollY;
+      if (Math.abs(current - lastScroll) > 40) setMenu(false);
+      lastScroll = current;
+      header?.classList.toggle("shadow-lg", current > 8);
+    },
+    { passive: true },
+  );
+</script>

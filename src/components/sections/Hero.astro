@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets";
+import VideoTerapia from "../../videos/terapia.mp4";
+import FotoCruzadas from "../../imgs/cruzadas1.jpg";
+---
+
+<section class="relative h-[85svh] min-h-[560px] w-full overflow-hidden">
+  <video
+    class="absolute inset-0 h-full w-full object-cover"
+    src={VideoTerapia}
+    autoplay
+    loop
+    muted
+    playsinline></video>
+  <div class="absolute inset-0 bg-black/70"></div>
+  <div class="relative z-10 mx-auto flex h-full max-w-6xl items-center px-4 sm:px-6">
+    <div class="max-w-xl space-y-4 text-white">
+      <p class="font-display text-2xl font-bold leading-tight sm:text-3xl">
+        Dar el paso no siempre <span class="text-primary">es fácil.</span>
+      </p>
+      <p class="text-lg font-light sm:text-xl">
+        No todo el mundo necesita <span class="font-bold tracking-wide">TERAPIA.</span>
+      </p>
+      <p class="text-base font-light sm:text-lg">
+        Pero si hay algo que te pesa, te bloquea o no sabes cómo gestionar,
+        empezar con una conversación puede ayudarte a verlo con claridad.
+      </p>
+      <p class="text-sm font-light sm:text-base">
+        Sin presión. Sin compromiso.<br />
+        Primera conversación sin coste para ver si esto encaja contigo.
+      </p>
+      <a
+        class="btn-light mt-2"
+        href="https://wa.me/+34676466092"
+        data-whatsapp-button="1"
+        data-whatsapp-source="portada_video"
+      >
+        Hablar por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="inicio" class="bg-background">
+  <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
+    <div class="grid items-center gap-10 md:grid-cols-2 md:gap-14">
+      <div data-reveal>
+        <p class="section-eyebrow">Terapia emocional en Palma</p>
+        <h1 class="section-title">
+          Terapia Emocional Individual y de Pareja en Palma de Mallorca
+        </h1>
+        <p class="mt-4 text-sm font-medium uppercase tracking-wide text-primaryhover/70 sm:text-base">
+          Sesiones presenciales · Opción online disponible
+        </p>
+
+        <div class="mt-8 space-y-5 text-base leading-relaxed text-primaryhover sm:text-lg">
+          <p>
+            Soy Kristian Iliev, Terapeuta Emocional en Palma. Acompaño a personas
+            que atraviesan <span class="font-bold">ansiedad, inseguridad, baja
+            autoestima, dependencia emocional</span> o rupturas de pareja, o que
+            simplemente sienten que no saben bien qué les pasa.
+          </p>
+          <p>
+            Ofrezco un <span class="font-bold">espacio seguro</span> para avanzar
+            con más <span class="font-bold">seguridad personal</span> y <span
+              class="font-bold">autoconocimiento</span
+            >.
+          </p>
+          <p>
+            Si te resuena lo que has leído, <span class="font-bold"
+              >podemos hablar</span
+            >.
+          </p>
+        </div>
+
+        <a
+          class="btn-primary mt-8"
+          href="https://wa.me/+34676466092"
+          data-whatsapp-button="1"
+          data-whatsapp-source="hero"
+        >
+          Contáctame
+        </a>
+      </div>
+
+      <div data-reveal class="order-first md:order-last">
+        <Image
+          src={FotoCruzadas}
+          alt="Kristian Iliev, terapeuta emocional"
+          class="aspect-[4/3] w-full rounded-3xl object-cover shadow-xl md:aspect-[3/4]"
+        />
+      </div>
+    </div>
+  </div>
+</section>

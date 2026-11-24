@@ -1,0 +1,119 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../../imgs/mentora_redondo1.svg";
+
+const columns = [
+  {
+    title: "Terapias",
+    links: [
+      { label: "Terapia Individual", href: "/#terapia-individual-palma" },
+      { label: "Terapia de Pareja", href: "/#terapia-pareja-palma" },
+      { label: "Terapia individual (info)", href: "/terapia-individual-palma/" },
+      { label: "Terapia de pareja (info)", href: "/terapia-pareja-palma/" },
+    ],
+  },
+  {
+    title: "Secciones",
+    links: [
+      { label: "Inicio", href: "/#inicio" },
+      { label: "Testimonio", href: "/#testimonio" },
+      { label: "¿En qué te ayudo?", href: "/#features" },
+      { label: "¿Quién soy?", href: "/#whois" },
+      { label: "Testimonios", href: "/#reviews" },
+      { label: "Contacto", href: "/#formulario" },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { label: "Aviso legal", href: "/documentos/avisoLegal.pdf", external: true },
+      { label: "Política de cookies", href: "/politica-cookies/" },
+    ],
+  },
+];
+---
+
+<footer class="bg-background">
+  <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
+    <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="text-center sm:text-left">
+        <Image
+          src={Logo}
+          alt="Mentora"
+          class="mx-auto h-20 w-20 rounded-full object-cover sm:mx-0"
+        />
+        <p class="mt-4 font-display text-xl font-bold leading-tight text-primaryhover">
+          Tu historia no te define
+        </p>
+        <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-primaryhover/70">
+          lo que haces con ella, sí
+        </p>
+      </div>
+
+      {
+        columns.map((column) => (
+          <div>
+            <h3 class="mb-4 text-xs font-extrabold uppercase tracking-[0.18em] text-primaryhover/70">
+              {column.title}
+            </h3>
+            <ul class="space-y-2.5">
+              {column.links.map((link) => (
+                <li>
+                  <a
+                    href={link.href}
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener noreferrer" : undefined}
+                    class="text-sm text-primaryhover transition-colors hover:text-black hover:underline"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="mt-10 border-t border-primaryhover/30 pt-6">
+      <button
+        type="button"
+        data-cookie-preferences
+        class="text-sm text-primaryhover underline underline-offset-2 transition-colors hover:text-black"
+      >
+        Preferencias de cookies
+      </button>
+    </div>
+
+    <div
+      class="mt-6 flex flex-col items-center gap-4 text-center text-sm text-primaryhover sm:flex-row sm:justify-between sm:text-left"
+    >
+      <p>
+        Desarrollado por <a
+          href="https://www.linkedin.com/in/jparradofiguerola/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-semibold underline underline-offset-2 hover:text-black"
+          >Javier Parrado Figuerola</a
+        > y <a
+          href="https://www.linkedin.com/in/adrian-colom-palacios/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-semibold underline underline-offset-2 hover:text-black"
+          >Adrián Colom Palacios</a
+        >
+      </p>
+      <p>© Copyright 2026. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  import { openPreferences } from "../../scripts/cookie-consent";
+
+  document.addEventListener("click", (event) => {
+    if ((event.target as Element)?.closest("[data-cookie-preferences]")) {
+      openPreferences();
+    }
+  });
+</script>

@@ -1,0 +1,77 @@
+---
+import { Image } from "astro:assets";
+import Lupa from "../../imgs/entender1.jpg";
+import Patrones from "../../imgs/romper1.jpg";
+import Plan from "../../imgs/camino1.jpg";
+import Seguimiento from "../../imgs/integrar1.jpg";
+
+const items = [
+  {
+    title: "Entender qué te está pasando realmente",
+    image: Lupa,
+    alt: "Entender qué te está pasando",
+    text: "Cuando sientes ansiedad, bloqueo, inseguridad o conflictos que se repiten, no trabajamos solo el síntoma. Exploramos el <b>origen emocional</b> para comprender qué está generando ese malestar y por qué sigue apareciendo.",
+  },
+  {
+    title: "Romper patrones que se repiten",
+    image: Patrones,
+    alt: "Romper patrones que se repiten",
+    text: "Dependencia emocional, discusiones constantes, dificultad para poner límites o sensación de vacío no aparecen por casualidad. Identificamos las <b>dinámicas que se repiten</b> en tu vida y empezamos a desmontarlas con claridad y responsabilidad.",
+  },
+  {
+    title: "Un plan claro para avanzar con seguridad",
+    image: Plan,
+    alt: "Un plan claro para avanzar",
+    text: "No se trata solo de entender lo que te ocurre, sino de saber qué hacer con ello. Diseñamos <b>pasos concretos</b> para que avances con seguridad y consolides cambios reales en tu forma de relacionarte contigo y con los demás.",
+  },
+  {
+    title: "Integrar lo que trabajamos en tu día a día",
+    image: Seguimiento,
+    alt: "Integrar lo que trabajamos en tu día a día",
+    text: "La terapia no es un desahogo puntual. Es un <b>trabajo profundo</b> para transformar tu forma de relacionarte contigo, con tu pareja y con los demás, generando cambios que se mantengan en el tiempo.",
+  },
+];
+---
+
+<section id="features" class="bg-white">
+  <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
+    <div class="mx-auto max-w-3xl text-center" data-reveal>
+      <p class="section-eyebrow">Cómo puedo ayudarte</p>
+      <h2 class="section-title">¿En qué te ayudo?</h2>
+      <div class="mt-6 space-y-4 text-base leading-relaxed text-slate-600 sm:text-lg">
+        <p>Muchas personas llegan sin tener claro qué les pasa.</p>
+        <p>
+          Otras saben exactamente qué les ocurre, pero no saben
+          <span class="font-bold text-primaryhover">cómo gestionarlo</span>.
+        </p>
+        <p>
+          Mi trabajo consiste en ayudarte a entender lo que te pasa, ordenar tus
+          emociones y <span class="font-bold text-primaryhover"
+            >consolides cambios profundos</span
+          > en tu forma de relacionarte contigo y con los demás.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 md:gap-8">
+      {
+        items.map((item) => (
+          <article class="card group" data-reveal>
+            <Image
+              src={item.image}
+              alt={item.alt}
+              class="mb-5 aspect-[16/10] w-full rounded-2xl object-cover"
+            />
+            <h3 class="font-display text-xl font-bold text-primaryhover sm:text-2xl">
+              {item.title}
+            </h3>
+            <p
+              class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base"
+              set:html={item.text}
+            />
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

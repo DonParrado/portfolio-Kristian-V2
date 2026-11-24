@@ -1,0 +1,41 @@
+<section id="testimonio" class="bg-white">
+  <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
+    <div class="mx-auto max-w-3xl text-center" data-reveal>
+      <p class="section-eyebrow">Testimonio en vídeo</p>
+      <h2 class="section-title">Así vivió ella su proceso en Terapia</h2>
+    </div>
+
+    <div
+      class="mx-auto mt-10 max-w-3xl overflow-hidden rounded-3xl bg-black shadow-xl"
+      data-reveal
+    >
+      <video
+        id="video-testimonio"
+        src="/videos/testimonio.mov"
+        controls
+        muted
+        playsinline
+        preload="metadata"
+        class="aspect-video w-full object-contain"></video>
+    </div>
+  </div>
+</section>
+
+<script>
+  const video = document.getElementById(
+    "video-testimonio",
+  ) as HTMLVideoElement | null;
+
+  if (video && "IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) video.play().catch(() => {});
+          else video.pause();
+        });
+      },
+      { threshold: 0.35 },
+    );
+    observer.observe(video);
+  }
+</script>

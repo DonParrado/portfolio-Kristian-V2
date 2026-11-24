@@ -1,0 +1,276 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="description" content="Soy Kristian Iliev, terapeuta emocional, y te acompaño en tu proceso de transformación personal, tanto de forma presencial como online."><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Astro"><meta property="og:title" content="Mentora | Terapeuta Emocional"><meta property="og:description" content="Soy Kristian Iliev, terapeuta emocional, y te acompaño en tu proceso de transformación personal, tanto de forma presencial como online."><meta name="google-site-verification" content="940c353974c1dada"><meta property="og:image" content="https://www.terapeutaemocionalpalma.es/images/logo.png"><meta property="og:url" content="https://www.terapeutaemocionalpalma.es"><meta property="og:type" content="website"><link rel="icon" href="/favicon.ico" type="image/x-icon"><link rel="canonical" href="https://www.terapeutaemocionalpalma.es"><title>Política de cookies | Mentora</title><!-- Consent Mode v2: los tags de Google solo se cargan tras aceptar analítica o publicidad. --><script>
+      (function () {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          window.dataLayer.push(arguments);
+        }
+        window.gtag = gtag;
+
+        gtag("consent", "default", {
+          ad_storage: "denied",
+          analytics_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+          functionality_storage: "granted",
+          security_storage: "granted",
+          wait_for_update: 500,
+        });
+
+        var googleLoaded = false;
+        var tidycalLoaded = false;
+
+        function loadTidycal() {
+          if (tidycalLoaded) return;
+          tidycalLoaded = true;
+          var script = document.createElement("script");
+          script.async = true;
+          script.src = "https://asset-tidycal.b-cdn.net/js/embed.js";
+          document.head.appendChild(script);
+        }
+
+        // TidyCal es de terceros: se carga con consentimiento o tras clic (servicio pedido).
+        document.addEventListener(
+          "click",
+          function (event) {
+            if (event.target.closest(".tidycal-embed")) loadTidycal();
+          },
+          true,
+        );
+
+        function loadGoogleTags(state) {
+          if (googleLoaded || !state) return;
+          var analytics = state.analytics === true;
+          var ads = state.advertising === true;
+          if (!analytics && !ads) return;
+          googleLoaded = true;
+
+          // Sin publicidad se limpia el gclid antes de cargar Google (pings cookieless).
+          if (!ads) {
+            try {
+              var cleanUrl = new URL(window.location.href);
+              if (cleanUrl.searchParams.has("gclid")) {
+                cleanUrl.searchParams.delete("gclid");
+                window.history.replaceState(
+                  window.history.state,
+                  "",
+                  cleanUrl.toString(),
+                );
+              }
+            } catch (error) {
+              // URL no estándar: se deja como está.
+            }
+          }
+
+          gtag("consent", "update", {
+            ad_storage: ads ? "granted" : "denied",
+            analytics_storage: analytics ? "granted" : "denied",
+            ad_user_data: ads ? "granted" : "denied",
+            ad_personalization: ads ? "granted" : "denied",
+          });
+
+          gtag("js", new Date());
+          gtag("config", "AW-16915885750");
+
+          var gtagScript = document.createElement("script");
+          gtagScript.async = true;
+          gtagScript.src =
+            "https://www.googletagmanager.com/gtag/js?id=AW-16915885750";
+          document.head.appendChild(gtagScript);
+
+          (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+            var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s),
+              dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+          })(window, document, "script", "dataLayer", "GTM-NR4MLXQC");
+
+          loadTidycal();
+        }
+
+        window.addEventListener("cookieconsent:change", function (event) {
+          loadGoogleTags(event.detail);
+        });
+
+        function bootstrap() {
+          try {
+            var raw = window.localStorage.getItem("cookie_consent_v1");
+            if (!raw) return;
+            var state = JSON.parse(raw);
+            if (state && state.version === 1) loadGoogleTags(state);
+          } catch (error) {
+            // Consentimiento ilegible: se vuelve a preguntar.
+          }
+        }
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", bootstrap);
+        } else {
+          bootstrap();
+        }
+      })();
+    </script><script type="module">const n=()=>{const s=document.querySelectorAll("[data-reveal]");if(!s.length||!("IntersectionObserver"in window))return;s.forEach(e=>{e.classList.contains("is-visible")||e.classList.add("is-pending")});const r=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&(t.target.classList.remove("is-pending"),t.target.classList.add("is-visible"),r.unobserve(t.target))})},{threshold:.15});s.forEach(e=>r.observe(e))},c=()=>{const s=document.querySelectorAll("[data-scrollspy-link]"),r=document.querySelectorAll("[data-scrollspy-target]");if(!s.length||!r.length)return;const e=new IntersectionObserver(t=>{t.forEach(o=>{if(!o.isIntersecting)return;const a=o.target.getAttribute("id");s.forEach(i=>{i.classList.toggle("scrollspy-active",i.getAttribute("href")===`/#${a}`)})})},{rootMargin:"-30% 0px -60% 0px"});r.forEach(t=>e.observe(t))};n();c();document.addEventListener("astro:page-load",()=>{n(),c()});</script><script type="module" src="/_astro/Layout.astro_astro_type_script_index_1_lang.aMIYBX7z.js"></script><meta name="google-site-verification" content="d7aMRTy08DCcJjtrM59LDdl2QIaxPwb_-4kia6ZcEyc"><link rel="stylesheet" href="/_astro/biografia.Dife-GET.css"></head> <body class="bg-white font-sans antialiased tracking-tight text-slate-800"> <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // La conversación y el tracking los gestiona src/scripts/whatsapp.ts.
+    const modal = document.getElementById("wa-modal");
+    const whatsappBtn = document.getElementById("whatsapp-btn");
+    const closeBtn = document.getElementById("wa-close");
+
+    whatsappBtn?.addEventListener("click", (e) => {
+      e.preventDefault();
+      const isOpen = modal?.classList.contains("opacity-100");
+      if (isOpen) {
+        modal?.classList.add("opacity-0", "pointer-events-none", "scale-95");
+        modal?.classList.remove("opacity-100", "scale-100");
+      } else {
+        modal?.classList.remove("opacity-0", "pointer-events-none", "scale-95");
+        modal?.classList.add("opacity-100", "scale-100");
+      }
+    });
+
+    closeBtn?.addEventListener("click", () => {
+      modal?.classList.add("opacity-0", "pointer-events-none", "scale-95");
+      modal?.classList.remove("opacity-100", "scale-100");
+    });
+
+    setTimeout(() => {
+      document.getElementById("wa-notification")?.classList.remove("hidden");
+    }, 5000);
+  });
+</script> <div class="fixed bottom-4 right-4 z-50 group"> <div id="wa-modal" class="absolute bottom-20 right-0 w-80 rounded-2xl overflow-hidden shadow-2xl opacity-0 pointer-events-none scale-95 transition-all duration-300 origin-bottom-right" style="z-index: 60;"> <div class="flex items-center justify-between px-4 py-3" style="background-color: #25D366;"> <div class="flex items-center gap-2"> <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"> <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path> </svg> <span class="text-white font-bold text-base">WhatsApp</span> </div> <button id="wa-close" class="text-white w-7 h-7 flex items-center justify-center rounded-full" style="background: rgba(0,0,0,0.25);"> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"> <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line> </svg> </button> </div> <div class="px-4 py-5" style="background-color: #0d1418;"> <div class="rounded-2xl rounded-tl-sm px-4 py-3 text-white text-sm leading-relaxed max-w-xs" style="background-color: #202c33;">
+Hola Kristian, me gustaría tener una primera conversación sin coste.
+        ¿Cómo funciona?
+</div> <div class="flex justify-end mt-5"> <button id="wa-start" data-whatsapp-button="1" data-whatsapp-source="modal" class="flex items-center gap-2 px-5 py-3 rounded-full font-bold text-white text-sm hover:opacity-90" style="background-color: #25D366;">
+Empecemos
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon> </svg> </button> </div> </div> </div> <a href="#" rel="noopener noreferrer" class="relative inline-block"> <span id="wa-notification" class="hidden absolute -top-1 -right-1 z-10 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-white text-xs font-bold leading-none" style="font-size: 11px;">
+1
+</span> <button id="whatsapp-btn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-4 rounded-full shadow-lg relative" aria-label="WhatsApp Button"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"> <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path> </svg> </button> </a> </div> <header id="site-header" class="sticky top-0 z-50 border-b border-primaryhover/10 bg-background/90 backdrop-blur-md"> <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 md:h-20"> <a href="/#inicio" class="shrink-0" aria-label="Mentora | Inicio"> <img src="/_astro/mentora_redondo1.CYHEDPvm_1WPvqC.svg" alt="Mentora" loading="lazy" decoding="async" fetchpriority="auto" width="561" height="570" class="h-11 w-11 rounded-full object-cover transition-transform duration-300 hover:scale-110 md:h-14 md:w-14"> </a> <p class="mr-auto ml-4 hidden max-w-[16rem] leading-tight lg:block"> <span class="block font-display text-lg font-bold text-primaryhover">Tu historia no te define</span> <span class="block text-[10px] font-extrabold uppercase tracking-[0.18em] text-primaryhover/70">lo que haces con ella, sí</span> </p> <nav class="hidden items-center gap-1 md:flex" aria-label="Principal"> <a data-scrollspy-link href="/#inicio" class="nav-link">Inicio</a> <a data-scrollspy-link href="/#testimonio" class="nav-link">Testimonio</a> <div class="group relative" data-dropdown> <button type="button" class="nav-link" aria-haspopup="true" aria-expanded="false" data-dropdown-toggle>
+Terapias
+<svg class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"> <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path> </svg> </button> <div class="invisible absolute left-0 top-full z-50 w-56 translate-y-2 rounded-2xl border border-primaryhover/10 bg-white p-2 opacity-0 shadow-xl transition duration-150 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100"> <a href="/#terapia-individual-palma" class="block rounded-xl px-4 py-2.5 text-sm font-medium text-primaryhover transition hover:bg-background"> Terapia Individual </a><a href="/#terapia-pareja-palma" class="block rounded-xl px-4 py-2.5 text-sm font-medium text-primaryhover transition hover:bg-background"> Terapia de Pareja </a> </div> </div> <a data-scrollspy-link href="/#features" class="nav-link">¿En qué te ayudo?</a> <a data-scrollspy-link href="/#whois" class="nav-link">¿Quién soy?</a> <a data-scrollspy-link href="/#reviews" class="nav-link">Testimonios</a> <a data-scrollspy-link href="/#formulario" class="nav-link">Contacto</a> </nav> <button id="menu-toggle" type="button" class="flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-full transition hover:bg-primaryhover/10 md:hidden" aria-controls="mobile-nav" aria-expanded="false" aria-label="Abrir menú"> <span class="menu-bar block h-0.5 w-7 bg-primaryhover transition"></span> <span class="menu-bar block h-0.5 w-7 bg-primaryhover transition"></span> <span class="menu-bar block h-0.5 w-7 bg-primaryhover transition"></span> </button> </div> <nav id="mobile-nav" class="no-scrollbar hidden max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-primaryhover/10 bg-background px-4 pb-8 pt-4 md:hidden" aria-label="Móvil"> <ul class="flex flex-col gap-1"> <li><a href="/#inicio" class="mobile-link">Inicio</a></li> <li><a href="/#testimonio" class="mobile-link">Testimonio</a></li> <li> <button type="button" class="mobile-link flex w-full items-center justify-between" data-mobile-subtoggle aria-expanded="false">
+Terapias
+<svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"> <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path> </svg> </button> <ul class="hidden pl-4" data-mobile-submenu> <li> <a href="/#terapia-individual-palma" class="mobile-link"> Terapia Individual </a> </li><li> <a href="/#terapia-pareja-palma" class="mobile-link"> Terapia de Pareja </a> </li> </ul> </li> <li><a href="/#features" class="mobile-link">¿En qué te ayudo?</a></li> <li><a href="/#whois" class="mobile-link">¿Quién soy?</a></li> <li><a href="/#reviews" class="mobile-link">Testimonios</a></li> <li><a href="/#formulario" class="mobile-link">Contacto</a></li> <li class="pt-3"> <a href="https://wa.me/+34676466092" data-whatsapp-button="1" data-whatsapp-source="menu_movil" class="btn-primary w-full">Hablar por WhatsApp</a> </li> </ul> </nav> </header> <script type="module">const d=document.getElementById("site-header"),s=document.getElementById("menu-toggle"),l=document.getElementById("mobile-nav"),r=document.querySelector("[data-mobile-subtoggle]"),o=document.querySelector("[data-mobile-submenu]"),n=e=>{l?.classList.toggle("hidden",!e),s?.setAttribute("aria-expanded",String(e)),s?.setAttribute("aria-label",e?"Cerrar menú":"Abrir menú"),s?.querySelectorAll(".menu-bar").forEach((c,a)=>{const t=c;e?(a===0&&(t.style.transform="translateY(7px) rotate(45deg)"),a===1&&(t.style.opacity="0"),a===2&&(t.style.transform="translateY(-7px) rotate(-45deg)")):(t.style.transform="",t.style.opacity="")})};s?.addEventListener("click",()=>{n(l?.classList.contains("hidden")??!0)});l?.querySelectorAll("a").forEach(e=>{e.addEventListener("click",()=>n(!1))});r?.addEventListener("click",()=>{const e=o?.classList.contains("hidden")??!0;o?.classList.toggle("hidden",!e),r.setAttribute("aria-expanded",String(e))});document.addEventListener("keydown",e=>{e.key==="Escape"&&n(!1)});let i=0;window.addEventListener("scroll",()=>{const e=window.scrollY;Math.abs(e-i)>40&&n(!1),i=e,d?.classList.toggle("shadow-lg",e>8)},{passive:!0});</script>  <main class="bg-background px-4 py-16 sm:px-6 md:py-24"> <article class="mx-auto max-w-4xl rounded-3xl bg-white p-6 shadow-sm sm:p-10"> <h1 class="font-display text-3xl font-bold text-primaryhover sm:text-4xl">
+Política de cookies
+</h1> <p class="mt-2 text-sm text-slate-500">
+Última actualización: 20 de noviembre de 2026
+</p> <div class="mt-8 space-y-6 text-sm leading-relaxed text-slate-700 sm:text-base"> <section> <h2 class="mb-2 font-display text-xl font-bold text-primaryhover">
+1. Responsable del tratamiento
+</h2> <p>
+El responsable de esta web es <strong>Kristian Iliev</strong>
+(Mentora | Terapeuta Emocional), titular de
+<strong>www.terapeutaemocionalpalma.es</strong>. Puedes consultar sus
+            datos identificativos completos (NIF y dirección de contacto) en el
+<a class="text-primaryhover underline underline-offset-2" href="/documentos/avisoLegal.pdf" target="_blank" rel="noopener noreferrer">aviso legal</a>.
+</p> </section> <section> <h2 class="mb-2 font-display text-xl font-bold text-primaryhover">
+2. Qué son las cookies y qué hacemos con ellas
+</h2> <p>
+Las cookies son pequeños archivos que los sitios web guardan en tu
+            navegador. En esta web se usan para recordar tu decisión sobre
+            cookies, medir las visitas y, solo si nos das tu consentimiento,
+            identificar el anuncio de Google Ads del que procedes mediante el
+            identificador <strong>GCLID</strong> (Google Click ID).
+</p> <p>
+El GCLID es un identificador único que Google añade a la URL cuando
+            haces clic en un anuncio. Nos permite atribuir una conversión (por
+            ejemplo, un primer contacto por WhatsApp) a ese anuncio. Por ello
+            lo tratamos como un dato personal y <strong>nunca lo guardamos ni
+            lo enviamos a Google antes de que aceptes la finalidad
+            «Publicidad»</strong>.
+</p> </section> <section> <h2 class="mb-2 font-display text-xl font-bold text-primaryhover">
+3. Cookies y tecnologías utilizadas
+</h2> <div class="mt-3 overflow-x-auto"> <table class="w-full min-w-[640px] border-collapse text-left"> <thead> <tr class="border-b border-primaryhover/30"> <th class="py-2 pr-4 font-semibold">Finalidad</th> <th class="py-2 pr-4 font-semibold">Tecnología</th> <th class="py-2 pr-4 font-semibold">Consentimiento</th> <th class="py-2 font-semibold">Duración</th> </tr> </thead> <tbody> <tr class="border-b border-slate-200"> <td class="py-3 pr-4">Necesarias</td> <td class="py-3 pr-4">Almacenamiento local <code>cookie_consent_v1</code> (recuerda
+                    tu elección).</td> <td class="py-3 pr-4">No se requiere</td> <td class="py-3">Hasta que borres los datos del sitio.</td> </tr> <tr class="border-b border-slate-200"> <td class="py-3 pr-4">Publicidad / Google Ads</td> <td class="py-3 pr-4">Almacenamiento local <code>gclid</code>, scripts de Google
+                    Tag Manager y gtag.js, cookies de medición de Google.</td> <td class="py-3 pr-4">Sí — opción «Publicidad»</td> <td class="py-3">Según la configuración de Google (consulta su política).</td> </tr> <tr class="border-b border-slate-200"> <td class="py-3 pr-4">Analítica</td> <td class="py-3 pr-4">Google Analytics a través de Google Tag Manager (<code>_ga</code>, <code>_ga_*</code>).</td> <td class="py-3 pr-4">Sí — opción «Analítica»</td> <td class="py-3">Según la configuración de Google (consulta su política).</td> </tr> <tr> <td class="py-3 pr-4">Reserva de citas</td> <td class="py-3 pr-4">Script de TidyCal (<code>asset-tidycal.b-cdn.net</code>).</td> <td class="py-3 pr-4">Sí, o se carga solo cuando haces clic en el calendario.</td> <td class="py-3">Según la política de TidyCal.</td> </tr> </tbody> </table> </div> </section> <section> <h2 class="mb-2 font-display text-xl font-bold text-primaryhover">
+4. Base jurídica y consentimiento
+</h2> <p>
+La base jurídica para las cookies de analítica y publicidad es tu
+<strong>consentimiento</strong> (art. 6.1.a del RGPD y art. 22 de la
+            Ley 34/2002). Las cookies necesarias se basan en el interés legítimo
+            en el funcionamiento técnico del sitio.
+</p> <p>
+Al entrar en la web se muestra un aviso con tres opciones: «Aceptar
+            todas», «Rechazar» y «Saber más». «Aceptar» y «Rechazar» tienen el
+            mismo tamaño y peso visual. Desde «Saber más» puedes activar o
+            desactivar cada finalidad de forma independiente y guardar tu
+            selección. Los interruptores de analítica y publicidad empiezan
+            siempre <strong>desactivados</strong>. El aviso no bloquea la
+            navegación: puedes seguir usando la web y el botón de WhatsApp
+            mientras está visible.
+</p> <p>
+Hasta que no eliges, se aplica la configuración de
+<strong>Google Consent Mode v2</strong> con todas las señales de
+            publicidad y analítica denegadas, y no se cargan los scripts de
+            Google ni de terceros.
+</p> </section> <section> <h2 class="mb-2 font-display text-xl font-bold text-primaryhover">
+5. Cómo retirar el consentimiento
+</h2> <p>
+Puedes cambiar o retirar tu decisión en cualquier momento haciendo
+            clic en <strong>«Preferencias de cookies»</strong> en el pie de
+            página. Al retirar el consentimiento de publicidad se elimina el
+            GCLID guardado en tu navegador y dejan de enviarse datos a Google y
+            a ClinicMate. La retirada no afecta a la licitud del tratamiento
+            anterior. Si cierras el aviso con la X sin elegir, no se activa
+            ninguna finalidad opcional y el aviso volverá a mostrarse en una
+            sesión posterior.
+</p> </section> <section> <h2 class="mb-2 font-display text-xl font-bold text-primaryhover">
+6. Terceros y transferencias
+</h2> <p>
+Google Ireland Limited actúa como proveedor de servicios de
+            medición y publicidad. ClinicMate recibe el GCLID y una referencia
+            de contacto como encargado del tratamiento, con la finalidad de
+            registrar las conversiones. Pueden realizarse transferencias de
+            datos a EE. UU. en los términos previstos en las políticas de
+            privacidad de dichos proveedores, que incluyen las garantías exigidas
+            por el RGPD (cláusulas contractuales tipo o mecanismos equivalentes).
+</p> </section> <section> <h2 class="mb-2 font-display text-xl font-bold text-primaryhover">
+7. Tus derechos
+</h2> <p>
+Puedes ejercer los derechos de acceso, rectificación, supresión,
+            oposición, limitación y portabilidad dirigiéndote al responsable a
+            través de los medios indicados en el aviso legal. Si consideras que
+            el tratamiento no es conforme, puedes presentar una reclamación ante
+            la <strong>Agencia Española de Protección de Datos (AEPD)</strong>,
+            www.aepd.es.
+</p> </section> </div> </article> </main>  <footer class="bg-background"> <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16"> <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4"> <div class="text-center sm:text-left"> <img src="/_astro/mentora_redondo1.CYHEDPvm_1WPvqC.svg" alt="Mentora" loading="lazy" decoding="async" fetchpriority="auto" width="561" height="570" class="mx-auto h-20 w-20 rounded-full object-cover sm:mx-0"> <p class="mt-4 font-display text-xl font-bold leading-tight text-primaryhover">
+Tu historia no te define
+</p> <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-primaryhover/70">
+lo que haces con ella, sí
+</p> </div> <div> <h3 class="mb-4 text-xs font-extrabold uppercase tracking-[0.18em] text-primaryhover/70"> Terapias </h3> <ul class="space-y-2.5"> <li> <a href="/#terapia-individual-palma" class="text-sm text-primaryhover transition-colors hover:text-black hover:underline"> Terapia Individual </a> </li><li> <a href="/#terapia-pareja-palma" class="text-sm text-primaryhover transition-colors hover:text-black hover:underline"> Terapia de Pareja </a> </li><li> <a href="/terapia-individual-palma/" class="text-sm text-primaryhover transition-colors hover:text-black hover:underline"> Terapia individual (info) </a> </li><li> <a href="/terapia-pareja-palma/" class="text-sm text-primaryhover transition-colors hover:text-black hover:underline"> Terapia de pareja (info) </a> </li> </ul> </div><div> <h3 class="mb-4 text-xs font-extrabold uppercase tracking-[0.18em] text-primaryhover/70"> Secciones </h3> <ul class="space-y-2.5"> <li> <a href="/#inicio" class="text-sm text-primaryhover transition-colors hover:text-black hover:underline"> Inicio </a> </li><li> <a href="/#testimonio" class="text-sm text-primaryhover transition-colors hover:text-black hover:underline"> Testimonio </a> </li><li> <a href="/#features" class="text-sm text-primaryhover transition-colors hover:text-black hover:underline"> ¿En qué te ayudo? </a> </li><li> <a href="/#whois" class="text-sm text-primaryhover transition-colors hover:text-black hover:underline"> ¿Quién soy? </a> </li><li> <a href="/#reviews" class="text-sm text-primaryhover transition-colors hover:text-black hover:underline"> Testimonios </a> </li><li> <a href="/#formulario" class="text-sm text-primaryhover transition-colors hover:text-black hover:underline"> Contacto </a> </li> </ul> </div><div> <h3 class="mb-4 text-xs font-extrabold uppercase tracking-[0.18em] text-primaryhover/70"> Legal </h3> <ul class="space-y-2.5"> <li> <a href="/documentos/avisoLegal.pdf" target="_blank" rel="noopener noreferrer" class="text-sm text-primaryhover transition-colors hover:text-black hover:underline"> Aviso legal </a> </li><li> <a href="/politica-cookies/" class="text-sm text-primaryhover transition-colors hover:text-black hover:underline"> Política de cookies </a> </li> </ul> </div> </div> <div class="mt-10 border-t border-primaryhover/30 pt-6"> <button type="button" data-cookie-preferences class="text-sm text-primaryhover underline underline-offset-2 transition-colors hover:text-black">
+Preferencias de cookies
+</button> </div> <div class="mt-6 flex flex-col items-center gap-4 text-center text-sm text-primaryhover sm:flex-row sm:justify-between sm:text-left"> <p>
+Desarrollado por <a href="https://www.linkedin.com/in/jparradofiguerola/" target="_blank" rel="noopener noreferrer" class="font-semibold underline underline-offset-2 hover:text-black">Javier Parrado Figuerola</a> y <a href="https://www.linkedin.com/in/adrian-colom-palacios/" target="_blank" rel="noopener noreferrer" class="font-semibold underline underline-offset-2 hover:text-black">Adrián Colom Palacios</a> </p> <p>© Copyright 2026. Todos los derechos reservados.</p> </div> </div> </footer> <script type="module" src="/_astro/Footer.astro_astro_type_script_index_0_lang.y7yePRYe.js"></script> <div id="cookie-modal" class="pointer-events-none fixed inset-0 z-40 hidden items-center justify-center overflow-hidden px-3 pt-24 pb-24 sm:px-4 md:pt-32" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-description"> <div data-cookie-card class="pointer-events-auto relative my-auto max-h-full w-full max-w-xl overflow-y-auto overscroll-contain rounded-2xl bg-white p-4 shadow-2xl ring-1 ring-slate-200/70 sm:p-7 md:p-8"> <button type="button" data-cookie-action="close" aria-label="Cerrar aviso de cookies" title="Cerrar aviso de cookies" class="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full text-slate-400 transition-colors duration-300 hover:bg-slate-100 hover:text-primaryhover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryhover"> <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"> <path d="M6 6l12 12M18 6L6 18"></path> </svg> </button> <div data-cookie-layer="main"> <div class="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-primary/20 sm:mb-4 sm:h-11 sm:w-11"> <svg class="h-5 w-5 text-primaryhover sm:h-6 sm:w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"></path> <circle cx="8.5" cy="12" r="0.8" fill="currentColor" stroke="none"></circle> <circle cx="11" cy="16" r="0.8" fill="currentColor" stroke="none"></circle> <circle cx="15.5" cy="14" r="0.8" fill="currentColor" stroke="none"></circle> </svg> </div> <h2 id="cookie-title" class="font-playfair text-xl font-bold text-primaryhover pr-10 sm:text-2xl">
+Tu privacidad importa
+</h2> <div id="cookie-description" class="mt-2 space-y-2 text-[13px] leading-snug text-slate-600 sm:mt-3 sm:space-y-3 sm:text-sm sm:leading-relaxed"> <p>
+Nos gustaría entender mejor cómo se utiliza esta web y qué anuncios
+          ayudan a que las personas nos encuentren.
+</p> <p>
+Para ello, además de las cookies necesarias, podemos utilizar cookies
+          propias y de Google para analizar las visitas y medir los resultados
+          de nuestra publicidad, siempre con tu permiso.
+</p> <p>Si las aceptas, nos ayudas a seguir mejorando este espacio.</p> <p class="text-xs">
+Más información en nuestra
+<a href="/politica-cookies" class="text-primaryhover/80 underline underline-offset-2 transition-colors duration-300 hover:text-primaryhover">Política de cookies</a>.
+</p> </div> <div class="mt-4 grid grid-cols-2 items-stretch gap-2 sm:mt-6 sm:flex sm:items-center"> <button type="button" data-cookie-action="accept" class="rounded-full bg-primary px-4 py-3 text-sm font-extrabold text-primaryhover shadow-lg shadow-primary/30 transition hover:bg-primary/90 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryhover sm:flex-1 sm:px-8 sm:py-3.5 sm:text-base">
+Aceptar todas
+</button> <button type="button" data-cookie-action="reject" class="rounded-full bg-primarydark px-4 py-3 text-sm font-extrabold text-primaryhover shadow-lg shadow-primarydark/30 transition hover:bg-primarydark/90 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryhover sm:flex-1 sm:px-8 sm:py-3.5 sm:text-base">
+Rechazar
+</button> <button type="button" data-cookie-action="more" class="rounded-full px-5 py-2.5 text-sm font-medium text-primaryhover/70 underline-offset-4 transition hover:bg-primaryhover/5 hover:text-primaryhover hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryhover col-span-2 justify-self-center sm:col-span-1">
+Saber más
+</button> </div> <p class="mt-3 text-[11px] leading-snug text-slate-400 sm:mt-5 sm:text-xs sm:leading-relaxed">
+Puedes cambiar tu decisión cuando quieras desde «Preferencias de
+        cookies» en el pie de página.
+</p> </div> <div data-cookie-layer="details" class="hidden"> <h2 id="cookie-title-details" class="font-playfair text-lg font-bold text-primaryhover pr-10 sm:text-2xl">
+Preferencias de cookies
+</h2> <p class="mt-1.5 text-xs leading-snug text-slate-600 sm:mt-3 sm:text-sm sm:leading-relaxed">
+Las cookies necesarias son imprescindibles para que la web funcione y
+        no se pueden desactivar. El resto solo se activan si tú lo permites.
+        Google Ads recibe el GCLID únicamente si activas «Publicidad».
+</p> <div class="mt-3 space-y-1 sm:mt-5 sm:space-y-3"> <div class="flex items-center justify-between gap-2 rounded-xl border border-slate-200 bg-slate-50 p-2 sm:gap-4 sm:p-3"> <span> <span class="block text-[13px] font-semibold text-slate-800 sm:text-sm">Necesarias</span> <span class="block text-xs text-slate-500">Siempre activas. No se pueden desactivar.</span> </span> <span class="shrink-0 rounded-full bg-primaryhover/10 px-3 py-1 text-xs font-semibold text-primaryhover">Activas</span> </div> <label class="flex cursor-pointer items-center justify-between gap-2 rounded-xl border border-slate-200 p-2 transition hover:border-primaryhover/40 sm:gap-4 sm:p-3"> <span> <span class="block text-[13px] font-semibold text-slate-800 sm:text-sm">Analítica</span> <span class="block text-xs text-slate-500">Nos ayuda a entender cómo se usa la web (_ga, GTM).</span> </span> <span class="relative inline-flex shrink-0 items-center"> <input type="checkbox" data-consent-toggle="analytics" class="peer sr-only" aria-label="Permitir cookies de analítica"> <span class="pointer-events-none h-6 w-11 rounded-full bg-slate-300 transition peer-checked:bg-primary peer-focus-visible:ring-2 peer-focus-visible:ring-primaryhover peer-focus-visible:ring-offset-2"></span> <span class="pointer-events-none absolute left-1 h-4 w-4 rounded-full bg-white shadow transition peer-checked:translate-x-5"></span> </span> </label> <label class="flex cursor-pointer items-center justify-between gap-2 rounded-xl border border-slate-200 p-2 transition hover:border-primaryhover/40 sm:gap-4 sm:p-3"> <span> <span class="block text-[13px] font-semibold text-slate-800 sm:text-sm">Publicidad / Google Ads</span> <span class="block text-xs text-slate-500">Permite enviar el GCLID a Google para medir conversiones.</span> </span> <span class="relative inline-flex shrink-0 items-center"> <input type="checkbox" data-consent-toggle="advertising" class="peer sr-only" aria-label="Permitir cookies de publicidad"> <span class="pointer-events-none h-6 w-11 rounded-full bg-slate-300 transition peer-checked:bg-primary peer-focus-visible:ring-2 peer-focus-visible:ring-primaryhover peer-focus-visible:ring-offset-2"></span> <span class="pointer-events-none absolute left-1 h-4 w-4 rounded-full bg-white shadow transition peer-checked:translate-x-5"></span> </span> </label> </div> <div class="mt-3 grid grid-cols-2 gap-1.5 sm:mt-6 sm:flex sm:flex-row sm:gap-2"> <button type="button" data-cookie-action="save" class="rounded-full bg-primaryhover px-5 py-3 text-sm font-semibold text-white transition hover:bg-primaryhover/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryhover col-span-2 sm:col-span-1">
+Guardar selección
+</button> <button type="button" data-cookie-action="accept" class="rounded-full bg-primary px-4 py-3 text-sm font-extrabold text-primaryhover shadow-lg shadow-primary/30 transition hover:bg-primary/90 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryhover sm:flex-1 sm:px-8 sm:py-3.5 sm:text-base">
+Aceptar todas
+</button> <button type="button" data-cookie-action="reject" class="rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryhover">
+Rechazar
+</button> </div> <div class="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-500 sm:mt-5"> <a href="/politica-cookies" class="underline underline-offset-2 hover:text-primaryhover">Política de cookies</a> <a href="/documentos/avisoLegal.pdf" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-primaryhover">Aviso legal</a> <button type="button" data-cookie-action="back" class="ml-auto underline underline-offset-2 hover:text-primaryhover">Volver</button> </div> </div> </div> </div> <script type="module" src="/_astro/CookieBanner.astro_astro_type_script_index_0_lang.DXwyC0t5.js"></script> <script type="module" src="/_astro/Layout.astro_astro_type_script_index_2_lang.C9HHZE_q.js"></script> </body> </html>

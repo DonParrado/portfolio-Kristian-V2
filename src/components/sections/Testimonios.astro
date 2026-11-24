@@ -1,0 +1,147 @@
+---
+import { Image } from "astro:assets";
+import Andrea from "../../imgs/andrea.png";
+import Cris from "../../imgs/cris.png";
+import Santi from "../../imgs/santi.png";
+import Salva from "../../imgs/s.png";
+import Yera from "../../imgs/yera.png";
+import Berna from "../../imgs/berna.png";
+
+const testimonials = [
+  {
+    img: Andrea,
+    name: "Andrea Bauza",
+    date: "Sep 3, 2024",
+    content:
+      "Conocí a Krsitian gracias a mi pareja y la verdad que me está ayudando bastante. Tiene muy buen trato, te transmite mucha confianza, paz, y sobre todo no te pone obligaciones ya que en mis anteriores psicologos me sentía obligada a hacer todo lo que me decían, con él todo lo contrario y eso hace que tenga más ganas de ir a las próximas sesiones. Por último, siempre salgo muy satisfecha y liberada en cada sesión que hago, lo recomiendo 100%.",
+  },
+  {
+    img: Cris,
+    name: "Cristina Ponce",
+    date: "Jan 22, 2024",
+    content:
+      "Kristian hace que se cree un ambiente muy relajante y acogedor. Te escucha, empatiza contigo, te pega ese empujón que necesitabas para avanzar en uno mismo. Después de la consulta (con previa autorización de uno mismo), te hace seguimiento de tu estado. Sin duda, volvería a la consulta.",
+  },
+  {
+    img: Santi,
+    name: "Santiago Peña",
+    date: "Ago 15, 2024",
+    content:
+      "Me costó decidirme por empezar con una terapia y aun así creo que es con la mejor persona que pude tomar esa decisión. Un gran profesional que te da todo lo que necesitas para superar todo eso que creías que no se podía. Gracias kristian.",
+  },
+  {
+    img: Salva,
+    name: "Salvita Costa",
+    date: "Feb 11, 2024",
+    content:
+      "Hola soy Salva, estoy muy contento con el trabajo que hace Kristian conmigo, me siento agradecido de haber podido ser su primer cliente, me sentí muy comprendido desde el principio y me fue muy fácil conectar con el y pillar confianza para contarle mis cosas! Totalmente recomendable de mi parte, me ha ayudado mucho! Muchas gracias Kristian!!",
+  },
+  {
+    img: Yera,
+    name: "Yerack Pavez",
+    date: "Nov 07, 2024",
+    content:
+      "Estuve un tiempo mal conmigo mismo y con todo lo de mi alrededor, no era feliz... Acudí a Kristian gracias a un contacto y la verdad es que me ha ayudado mucho, me ha hecho ver que siempre hay algo bueno en todo. Transmite mucha confianza y hace que pueda abrirme sin ningún tipo de problema, lo recomiendo al 100%",
+  },
+  {
+    img: Berna,
+    name: "Bernarda Goñi",
+    date: "Jan 30, 2024",
+    content:
+      "A Kristian me lo recomendaron, y fue una experiencia diferente a la psicología convencional que me sirvió mucho. Él es muy cálido, inspira confianza y a la vez compromiso con tu bienestar en todo momento. Estar en su consulta te deja mucha paz y tranquilidad, yo fui muy angustiada y al salir de allí me sentía diferente. Lo recomiendo!!",
+  },
+];
+---
+
+<section id="reviews" class="overflow-hidden bg-white">
+  <div class="mx-auto max-w-6xl px-4 pt-16 sm:px-6 md:pt-24">
+    <div class="mx-auto max-w-3xl text-center" data-reveal>
+      <p class="section-eyebrow">Lo que dicen de mí</p>
+      <h2 class="section-title">Testimonios</h2>
+    </div>
+  </div>
+
+  <div
+    id="testimonials-track"
+    class="no-scrollbar mt-10 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-16 md:justify-start md:overflow-visible md:px-6 md:pb-24 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]"
+    data-marquee
+  >
+    {
+      [...testimonials, ...testimonials].map((item, index) => (
+        <article
+          class="card w-[19rem] shrink-0 snap-start sm:w-[22rem]"
+          aria-hidden={index >= testimonials.length ? "true" : undefined}
+        >
+          <header class="mb-3 flex items-center gap-3">
+            <Image
+              src={item.img}
+              alt={item.name}
+              width={44}
+              height={44}
+              class="h-11 w-11 rounded-full object-cover"
+            />
+            <div>
+              <p class="text-sm font-bold text-primaryhover">{item.name}</p>
+              <div class="flex gap-0.5 text-amber-400" aria-label="5 de 5 estrellas">
+                {[1, 2, 3, 4, 5].map(() => (
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 256 256" fill="currentColor">
+                    <path d="M239.2 97.4A16.4 16.4 0 00224.6 86l-59.4-4.1-22-55.5A16.4 16.4 0 00128 16h0a16.4 16.4 0 00-15.2 10.4L90.4 82.2 31.4 86A16.5 16.5 0 0016.8 97.4a16.8 16.8 0 005.2 18.1l45.4 38.4L53.9 207a18.5 18.5 0 007 19.6 18 18 0 0020.1.6l46.9-29.7h.2l50.5 31.9a16.1 16.1 0 008.7 2.6 16.5 16.5 0 0015.8-20.8l-14.3-58.1L234 115.5a16.8 16.8 0 005.2-18.1z" />
+                  </svg>
+                ))}
+              </div>
+            </div>
+          </header>
+          <p class="text-sm leading-relaxed text-slate-600">{item.content}</p>
+          <footer class="mt-4 flex items-center gap-2 text-xs text-slate-500">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M15.68 6.546H8.044v3.273h4.328c-.692 2.182-2.4 2.909-4.363 2.909a4.728 4.728 0 1 1 3.035-8.346l2.378-2.265A8 8 0 1 0 8.01 16.001c4.411 0 8.4-2.909 7.671-9.455Z" />
+            </svg>
+            <span>Google · {item.date}</span>
+          </footer>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  #testimonials-track {
+    animation: marquee 60s linear infinite;
+    width: max-content;
+  }
+
+  #testimonials-track.is-paused {
+    animation-play-state: paused;
+  }
+
+  @media (max-width: 767px) {
+    #testimonials-track {
+      animation: none;
+    }
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+</style>
+
+<script>
+  const track = document.querySelector<HTMLElement>("[data-marquee]");
+  if (track) {
+    const pause = () => track.classList.add("is-paused");
+    const resume = () => {
+      if (window.matchMedia("(max-width: 767px)").matches) return;
+      track.classList.remove("is-paused");
+    };
+
+    track.addEventListener("pointerdown", pause);
+    track.addEventListener("mouseenter", pause);
+    track.addEventListener("mouseleave", resume);
+    track.addEventListener("touchstart", pause, { passive: true });
+  }
+</script>

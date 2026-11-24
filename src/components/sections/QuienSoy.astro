@@ -1,0 +1,55 @@
+---
+import { Image } from "astro:assets";
+import FotoCruzadas from "../../imgs/cruzadas1.jpg";
+---
+
+<section id="whois" class="bg-background">
+  <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
+    <div class="grid items-center gap-10 md:grid-cols-2 md:gap-14">
+      <div data-reveal>
+        <p class="section-eyebrow">Sobre mí</p>
+        <h2 class="section-title">¿Quién soy?</h2>
+        <h3 class="mt-8 font-display text-xl font-bold text-primaryhover sm:text-2xl">
+          De buscar respuestas a acompañar procesos
+        </h3>
+        <div class="mt-4 space-y-4 text-base leading-relaxed text-slate-600 sm:text-lg">
+          <p>
+            Durante años intenté entender qué me pasaba. Probé distintas formas
+            de terapia, incluida la psicología tradicional y la terapia
+            cognitivo-conductual, que me aportaron herramientas valiosas, pero
+            sentía que algo no terminaba de encajar.
+          </p>
+          <p>
+            Comprendí que no solo necesitaba cambiar pensamientos, sino entender
+            lo que ocurría en mi cuerpo, en mis emociones y en mis relaciones.
+          </p>
+          <p>
+            Fue ahí cuando conecté con la Terapia Gestalt, la Programación
+            Neurolingüística y el Mindfulness. Ese enfoque más experiencial
+            transformó profundamente mi manera de comprender la psicoterapia y
+            mi propio proceso.
+          </p>
+          <p>
+            Hoy, como Terapeuta Emocional en Palma de Mallorca, acompaño
+            procesos individuales y de pareja desde esa integración:
+            comprensión psicológica, trabajo emocional profundo y
+            responsabilidad personal.
+          </p>
+        </div>
+        <p class="mt-6 text-sm font-semibold text-primaryhover sm:text-base">
+          Si quieres conocer la historia completa y cómo influye hoy en mi
+          manera de trabajar, puedes leerla aquí.
+        </p>
+        <a class="btn-primary mt-6" href="/biografia/">Ver historia completa</a>
+      </div>
+
+      <div data-reveal class="order-first md:order-last">
+        <Image
+          src={FotoCruzadas}
+          alt="Kristian Iliev, terapeuta emocional"
+          class="aspect-[4/3] w-full rounded-3xl object-cover shadow-xl md:aspect-[3/4]"
+        />
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import FotoIndividual from "../../imgs/individual1.jpg";
+---
+
+<section id="terapia-individual-palma" class="bg-white">
+  <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
+    <div class="grid items-center gap-10 md:grid-cols-2 md:gap-14">
+      <div data-reveal>
+        <Image
+          src={FotoIndividual}
+          alt="Terapia individual en Palma de Mallorca"
+          class="aspect-[4/3] w-full rounded-3xl object-cover shadow-xl"
+        />
+      </div>
+      <div data-reveal>
+        <p class="section-eyebrow">Terapias</p>
+        <h2 class="section-title">Terapia individual en Palma de Mallorca</h2>
+        <div class="mt-6 space-y-4 text-base leading-relaxed text-slate-600 sm:text-lg">
+          <p>
+            Te acompaño a entender lo que te pasa, regular tus emociones y
+            <span class="font-bold text-primaryhover">recuperar seguridad en ti</span>
+            cuando la ansiedad, la inseguridad o la baja autoestima te están
+            pasando factura.
+          </p>
+          <p>
+            ¿Sientes que <span class="font-bold text-primaryhover"
+              >tus emociones te controlan</span
+            > más de lo que tú las controlas a ellas?
+          </p>
+        </div>
+        <a class="btn-outline mt-8" href="/terapia-individual-palma/">Ver más</a>
+      </div>
+    </div>
+  </div>
+</section>
