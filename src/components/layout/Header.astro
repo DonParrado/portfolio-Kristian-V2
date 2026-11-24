@@ -151,14 +151,17 @@ const terapias = [
     toggle?.querySelectorAll(".menu-bar").forEach((bar, i) => {
       const el = bar as HTMLElement;
       if (open) {
-        if (i === 0) el.style.transform = "translateY(7px) rotate(45deg)";
+        if (i === 0) el.style.transform = "translateY(8px) rotate(45deg)";
         if (i === 1) el.style.opacity = "0";
-        if (i === 2) el.style.transform = "translateY(-7px) rotate(-45deg)";
+        if (i === 2) el.style.transform = "translateY(-8px) rotate(-45deg)";
       } else {
         el.style.transform = "";
         el.style.opacity = "";
       }
     });
+    // El overlay se desplaza por dentro; la página de detrás no debe moverse.
+    document.body.style.overflow = open ? "hidden" : "";
+    if (open) mobileNav?.scrollTo({ top: 0 });
   };
 
   toggle?.addEventListener("click", () => {
@@ -179,15 +182,14 @@ const terapias = [
     if (event.key === "Escape") setMenu(false);
   });
 
-  let lastScroll = 0;
   window.addEventListener(
     "scroll",
-    () => {
-      const current = window.scrollY;
-      if (Math.abs(current - lastScroll) > 40) setMenu(false);
-      lastScroll = current;
-      header?.classList.toggle("shadow-lg", current > 8);
-    },
+    () => header?.classList.toggle("shadow-lg", window.scrollY > 8),
     { passive: true },
   );
+
+  // Al pasar a escritorio el overlay debe desaparecer aunque estuviera abierto.
+  window.matchMedia("(min-width: 768px)").addEventListener("change", (event) => {
+    if (event.matches) setMenu(false);
+  });
 </script>
